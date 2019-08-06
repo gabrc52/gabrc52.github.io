@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <meta name="Description" CONTENT="Download a problem statement from UVa online judge">
+    <title>Download UVa problem statement</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Roboto, "Noto Sans", "Open Sans", sans-serif;
+            color: rgba(0,0,0,0.8);
+            padding: 20px;
+        }
+        h1 {
+            margin-top: 0px;
+        }
+        button, .boton {
+            background: #4d70a8;
+            display: inline-block;
+            border: none;
+            text-align: center; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; margin-bottom: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        strong {
+            color: maroon;
+        }
+        div + div {
+            border-top: 1pt solid rgb(0,0,0,0.2);
+        }
+        div {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #exito {
+            font-weight: bold; color: green; border-bottom: 1pt solid rgb(0,0,0,0.2); padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+    function getProblem() {
+        var id = document.getElementById("id").value;
+        document.getElementById("iframe").src = "https://uva.onlinejudge.org/external/"+Math.floor(id/100)+"/"+id+".html";
+    }
+    </script>
+    <div><h1>Get UVa problem statement</h1>
+    <p>Enter problem ID: <input type="text" id="id"> <button onclick="getProblem()">Go!</button></p>
+    <iframe id="iframe" src="about:blank" width="100%" height="500">
+</body>
+
+</html>
