@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /11.c35-labs/
